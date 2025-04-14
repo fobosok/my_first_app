@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'theme_controller.dart';
-import 'pages/home_page.dart';
+import 'providers/theme_provider.dart';
+import 'screens/home_page.dart';
 
 void main() {
   runApp(

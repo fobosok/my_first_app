@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 class ThemeController extends ValueNotifier<ThemeMode> {
   static const _key = 'isDarkMode';
 
@@ -11,6 +12,7 @@ class ThemeController extends ValueNotifier<ThemeMode> {
     final isDark = prefs.getBool(_key) ?? false;
     value = isDark ? ThemeMode.dark : ThemeMode.light;
   }
+
   Future<void> _saveTheme(ThemeMode mode) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool(_key, mode == ThemeMode.dark);
